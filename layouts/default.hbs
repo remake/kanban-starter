@@ -4,15 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanban App</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/remake.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/_remake.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/accounts.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/flash.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/site-nav.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/text-field.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/front-page.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/kanban.css">
 </head>
 <body>
   <div class="container">
     <div class="nav">
       <a class="logo" href="{{#if currentUser}}/{{currentUser.details.username}}{{else}}/{{/if}}">
-        <img class="logo__image" src="/images/logo.svg">
+        <img class="logo__image" src="/assets/images/logo.svg">
         <span class="logo__text">TaskFellow <span class="logo__version">v1.0</span></span>
       </a>
       {{#if currentUser}}
@@ -40,9 +47,12 @@
     {{> yield }}
   </div>
   {{#if isPageAuthor}}
-    {{!-- Prevent loading the Remake framework if the page isn't editable --}}
-    <script src="/js/remake-init.js"></script>
+    {{!-- Don't load Remake framework if the page isn't editable --}}
+    <script src="/assets/js/vendor/Sortable.min.js"></script>
+    <script src="/assets/js/vendor/crostini.min.js"></script>
+    <script src="/remake/js/remake.min.js"></script>
+    <script src="/assets/js/remake-init.js"></script>
   {{/if}}
-  <script src="/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
