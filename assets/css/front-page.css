@@ -1,0 +1,23 @@
+.front-page {
+  margin: 4.5rem auto;
+  text-align: center;
+}
+.front-page__preview-container {
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  max-width: 320px;
+  border: 1px solid #8a9db7;
+  border-radius: 5px;
+}
+@media (max-width: 400px) {
+  .front-page__preview-container {
+    margin: 0 1rem 2rem;
+  }
+}
+.front-page__preview {
+  width: 100%;
+}
+.front-page__heading {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+}

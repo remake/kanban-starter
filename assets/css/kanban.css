@@ -1,0 +1,207 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+.header__text {
+  font-size: 25px;
+  color: #536988;
+  display: inline-block;
+}
+
+.board-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+.board {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  bottom: 0;
+  left: 0;
+  overflow-x: auto;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stack {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  margin-right: 1rem;
+}
+.stack__top {
+  flex-shrink: 0;
+  display: flex;
+  padding-top: 0.5rem;
+  margin-bottom: 0.65rem;
+  color: #536988;
+}
+.stack__text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.stack__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  background-color: #536988;
+  border-radius: 5px;
+}
+.stack__new:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.stack__new-icon {
+  position: relative;
+  top: -1px;
+}
+.stack__list {
+  flex-shrink: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 3rem;
+  padding: 0 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #F2F6FA;
+  border-radius: 5px 5px 0 0;
+}
+.stack__add-card-container {
+  padding: 0.5rem;
+  background-color: #F2F6FA;
+  border-radius: 0 0 5px 5px;
+}
+.stack__add-card {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 41px;
+  border: 2px dashed #DCE0E4;
+  border-radius: 5px;
+  color: #536988;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stack__add-card:hover {
+  cursor: pointer;
+  background-color: #e4ebf3;
+  border-color: #c5cfdb;
+}
+.stack__add-card-icon {
+  margin-right: 0.5rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 5px;
+  color: #536988;
+  margin-top: 10px;
+  box-shadow: 0px 4px 10px rgba(62, 114, 167, 0.15);
+}
+.card:hover {
+  cursor: pointer;
+  background-color: #F2F6FA;
+}
+.card:nth-child(1) {
+  margin-top: 15px;
+}
+.card__text {
+  flex-shrink: 1;
+  margin: 1rem 0.25rem 1rem 1rem;
+  line-height: 1.4em;
+}
+.card__drag {
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 0.25rem;
+  padding: 1rem;
+  cursor: grab;
+}
+
+.board::-webkit-scrollbar {
+  width: 20px;
+  height: 25px;
+}
+
+.stack__list::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+/* Track */
+.board::-webkit-scrollbar-track {
+  background: #FFF !important;
+}
+
+.stack__list::-webkit-scrollbar-track {
+  background: #F2F6FA !important;
+  border-radius: 5px;
+}
+
+/* Handle */
+.board::-webkit-scrollbar-thumb {
+  background: #DAD9DE;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 8px solid #FFF;
+}
+
+.stack__list::-webkit-scrollbar-thumb {
+  background: #DAD9DE;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 5px solid #F2F6FA;
+}
+
+/* Handle on hover */
+.board::-webkit-scrollbar-thumb:hover, .stack__list::-webkit-scrollbar-thumb:hover {
+  background: #DAD9DE;
+}
+
+@media only screen and (max-width: 658px) {
+  body {
+    overflow: auto;
+  }
+
+  .board {
+    position: static;
+    display: block;
+    overflow: auto;
+  }
+
+  .stack {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    overflow: auto;
+  }
+
+  .stack__list {
+    overflow-y: auto;
+  }
+}
