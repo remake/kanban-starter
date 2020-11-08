@@ -1,29 +1,26 @@
 # Partials
 
-Any template files put into this directory can be accessed from templates in the `/pages` directory.
+Any template files put into this directory can be accessed from your page templates.
 
+# How to render a partial in a page template
 
-# Adding a partial to a page template
-
-In `app-index.hbs`, for example:
+Write the following code in `app-index.hbs`:
 
 ```
 {{> say-hello}}
 ```
 
-
 # The partial file
 
-In order to include the above partial, you'd need to create `/app/partials/say-hello.hbs` and add the following code:
+In order to include the above partial, you need to create a file in `/app/partials/say-hello.hbs` and add the following code:
 
 ```
 <div>Hello {{currentUser.details.username}}</div>
 ```
 
-Your partial file will have access to all the template variables from the page it's included in.
-
+Your partial file will have access to all the template variables from the page that it's included in.
 
 # Handlebars docs
 
-To learn more, read about partials in the Handlebars.js docs: https://handlebarsjs.com/guide/partials.html
+To learn more about templates and partials, read the Handlebars.js documentation: https://handlebarsjs.com/guide/partials.html
 
