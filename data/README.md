@@ -1,15 +1,24 @@
-About the files in this directory:
+This directory stores all of the data for your app.
 
-# global-app-data.json
+# "database" directory
 
-Data in this file will be accessible from every layout, page, and partial template for every user.
+All user data is stored in this directory. A user's app data goes into the `database/user-app-data` directory and their login details go into the `database/user-details` directory.
 
-Use it to specify your app's name, navigation links, or any other static data that's globally accessible for all users.
+# "uploads" directory
 
-# user-starting-data.json
+When a user uploads a file, it's given a random name and put into this `uploads` directory.
 
-Data in this file is the starting data that every user will receive after signing up.
+# bootstrap.json
+
+After a user signs up for your app, a copy of the data in the `bootstrap.json` file will be loaded into their data.
 
 If a user signs up and you change this file afterwards, they won't get the updated data.
 
-To get a user's current data, look in the directory `/_remake-data/user-app-data` and find the JSON file with the user's username.
+To see a user's current data, look in the `database/user-app-data` directory.
+
+# global.json
+
+Data in this file will be accessible from every layout, page, and partial template for every user.
+
+Use it to specify global, unchanging data, like your app's name, navigation links, or any other static data that's globally accessible for all users.
+
