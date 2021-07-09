@@ -8,6 +8,6 @@ To generate it, just run the command `npx remake create myapp`.
 
 ## The Code
 
-All of the behavior for this app is defined in one file (73 lines of mostly HTML):
+All of the behavior for this app is defined in one file (73 line HTML template):
 
 * [The app code](pages/app-index.hbs) (app-index.hbs)
