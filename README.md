@@ -1,4 +1,13 @@
-# Kanban starter for remake-cli
+# Kanban App (Remake)
 
-This repository is intended to be used by remake-cli.
-If you want to create a remake app, just run `npx remake create myapp`.
+This is the official Kanban app for [Remake](https://remaketheweb.com/).
+
+To generate it, just run the command `npx remake create myapp`.
+
+![install](https://user-images.githubusercontent.com/364330/125079931-2ecd8500-e092-11eb-80ad-e3131c7def16.gif)
+
+## The Code
+
+All of the behavior for this app is defined in one file (73 lines of mostly HTML):
+
+* [The app code](pages/app-index.hbs) (app-index.hbs)
